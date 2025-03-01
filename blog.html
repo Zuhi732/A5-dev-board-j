@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard - Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-5">
+    <div class="max-w-4xl mx-auto bg-white shadow-lg p-6 rounded-lg">
+        <!-- Navbar -->
+        <nav class="bg-white shadow-lg flex justify-between items-center px-6 py-3 rounded-lg">
+            <div class="flex items-center gap-2">
+                <img src="image/logo.png" alt="Logo" class="w-8 h-8">
+                <h1 class="text-xl font-bold">
+                    <span class="text-blue-500">Dev</span>Board
+                </h1>
+            </div>
+
+            <button onclick="goBack()" 
+                class="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition duration-200">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" 
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back to Desk
+            </button>
+        </nav>
+
+        <h2 class="text-xl font-bold text-center mt-6 mb-6">Blogs</h2>
+
+        <!-- Blog Content -->
+        <div class="space-y-6">
+            <!-- Question 1 -->
+            <div class="bg-white shadow-md p-6 rounded-lg">
+                <h3 class="font-semibold text-lg">Question-1: What are the different ways to select an element in the DOM?</h3>
+                <p class="text-gray-600 mt-2">
+                    We can select elements using:
+                    <ul class="list-disc ml-6">
+                        <li><code>document.getElementById("id")</code> - Selects an element by ID.</li>
+                        <li><code>document.getElementsByClassName("class")</code> - Selects elements by class name.</li>
+                        <li><code>document.getElementsByTagName("tag")</code> - Selects elements by tag name.</li>
+                        <li><code>document.querySelector("selector")</code> - Selects the first matching element.</li>
+                        <li><code>document.querySelectorAll("selector")</code> - Selects all matching elements.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white shadow-md p-6 rounded-lg">
+                <h3 class="font-semibold text-lg">Question-2: What is the difference between innerHTML, innerText, and textContent?</h3>
+                <p class="text-gray-600 mt-2">
+                    <strong>innerHTML:</strong> Returns or sets the HTML content inside an element.<br>
+                    <strong>innerText:</strong> Returns or sets only the visible text inside an element.<br>
+                    <strong>textContent:</strong> Returns or sets all text, including hidden content.
+                </p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white shadow-md p-6 rounded-lg">
+                <h3 class="font-semibold text-lg">Question-3: What is event delegation in the DOM?</h3>
+                <p class="text-gray-600 mt-2">
+                    Event delegation is a technique where a parent element handles events for multiple child elements.
+                    Instead of adding event listeners to individual elements, we attach one listener to a common parent.
+                </p>
+            </div>
+
+            <!-- Question 4 (Fixed Shadow Issue) -->
+            <div class="bg-white shadow-md p-6 rounded-lg">
+                <h3 class="font-semibold text-lg">Question-4: What is event bubbling in the DOM?</h3>
+                <p class="text-gray-600 mt-2">
+                    Event bubbling is when an event on a child element <strong>automatically moves up</strong> (or "bubbles") to its parent elements. <br>
+                    <strong>Example:</strong> If we click a button inside a <code>&lt;div&gt;</code>, the click event will <strong>also trigger on the parent</strong> <code>&lt;div&gt;</code>.
+                </p>
+            </div>
+
+            <!-- Question 5 (Properly Separated Now) -->
+            <div class="bg-white shadow-md p-6 rounded-lg">
+                <h3 class="font-semibold text-lg">Question-5: How do you create, add, and remove elements using JavaScript?</h3>
+                <p class="text-gray-600 mt-2">
+                    <strong>Creating an Element:</strong> Use <code>document.createElement("tag")</code> to create a new element. <br>
+                    <strong>Adding an Element:</strong> Use <code>parent.appendChild(newElement)</code> to insert it into the page. <br>
+                    <strong>Removing an Element:</strong> Use <code>element.remove()</code> to delete it from the page.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
